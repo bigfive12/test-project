@@ -23,8 +23,7 @@ jobs:
 
       - name: Run OpenCode
         uses: anomalyco/opencode/github@latest
-        env:
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         with:
-          model: deepseek/deepseek-chat
+          # Указываем бесплатную модель из OpenCode Zen
+          model: opencode/deepseek-v4-flash-free
           use_github_token: true
